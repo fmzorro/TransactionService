@@ -1,0 +1,6 @@
+-r requirements.txt
+bandit
+
+pre-commit
+pre-commit-hooks
+ruff

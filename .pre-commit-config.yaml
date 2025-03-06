@@ -1,0 +1,58 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ruff
+        name: ruff
+        entry: ruff check
+        args: [ --fix ]
+        language: system
+        files: \.py$
+        exclude: ^venv/|^alembic/
+
+      - id: ruff-format
+        name: ruff-format
+        entry: ruff format
+        args: [ ]
+        language: system
+        files: \.py$
+        exclude: ^venv/|^alembic/
+
+      - id: check-added-large-files
+        name: check-added-large-files
+        entry: check-added-large-files
+        args: [ ]
+        language: system
+        files: ""
+        exclude: ^venv/|^alembic/
+
+      - id: check-merge-conflict
+        name: check-merge-conflict
+        entry: check-merge-conflict
+        args: [ ]
+        language: system
+        files: ""
+        exclude: ^venv/|^alembic/
+
+      - id: detect-private-key
+        name: detect-private-key
+        entry: detect-private-key
+        args: [ ]
+        language: system
+        files: ""
+        exclude: ^venv/|^alembic/
+
+      - id: requirements-txt-fixer
+        name: requirements-txt-fixer
+        entry: requirements-txt-fixer
+        args: [ ]
+        language: system
+        files: \.txt$
+        exclude: ^venv/|^alembic/
+
+      - id: bandit
+        name: bandit
+        entry: bandit
+        args: [ ]
+        language: python
+        files: \.py$
+        exclude: ^venv/|^alembic/
